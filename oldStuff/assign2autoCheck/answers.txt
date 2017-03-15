@@ -1,0 +1,7 @@
+Based off the residual plot, one or more variables appear to be polynomial, possibly quadratic. Also, based off intuition, I don't see why country of origin, represented as integers, would change mpg. 
+
+In order test this, I used a for loop to do a linear regression on each individual column. Based off these plots, horsepower and engine displacement seem to have a polynomial pattern, which is confirmed by adding polynomials columns to the xmatrix. Weight also appears polynomial, but adding a polynomial weight column results in an unsolvable matrix. Removing origin seems to have little effect on the final regression; the Rsquared value is actually higher without origin. 
+
+I would use the first bootstrapping method, the correlation model. Using the second (fixed effect) model would retain the polynomial(?) structure in the original data, and would randomize the residual curve. Using the first model would take a fraction of the polynomial structure, but would likely still look polynomial in both the original data and the residuals if there are a large amount of uniform samples. 
+
+Notes: This code has readline(), so pressing Enter is required to display all possible plots. I did this because my computer screen is too small to visualize more than 2 to 4 plots, so I kept the window at 1x2 plots and just stepped through each plot manually.

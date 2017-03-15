@@ -1,0 +1,32 @@
+Notes: 
+Bootstrap is a studentized bootstrap, nboot = 10000. Resamples that have exactly 1 unique element are ignored. 
+CLT uses T-score confidence interval from Stat I. 
+
+The coverage rate for log normal distribution is generally less than alpha, but for large N (N = 100) it is <5% off. The bootstrap is always worse than the CLT. 
+
+Based off eyeballing a couple of failed runs, the bootstrap tends to underestimate the mean drastically. Possibly an error in linear interpolation?
+
+The coverage rate for a normal distribution is generally alpha, for both the bootstrap and CLT. 
+
+Since this program does not attempt to resample if a sample is "bad" (var = 0), low sample sizes tend to suffer in accuracy. 
+
+
+# Log normal distribution coverage rate
+[1] "Tests at Sample size 3, alpha=0.900000: Bootstrap - 0.658, CLT - 0.757"
+[1] "Tests at Sample size 3, alpha=0.950000: Bootstrap - 0.650, CLT - 0.842"
+[1] "Tests at Sample size 10, alpha=0.900000: Bootstrap - 0.735, CLT - 0.763"
+[1] "Tests at Sample size 10, alpha=0.950000: Bootstrap - 0.800, CLT - 0.850"
+[1] "Tests at Sample size 30, alpha=0.900000: Bootstrap - 0.799, CLT - 0.827"
+[1] "Tests at Sample size 30, alpha=0.950000: Bootstrap - 0.838, CLT - 0.871"
+[1] "Tests at Sample size 100, alpha=0.900000: Bootstrap - 0.853, CLT - 0.868"
+[1] "Tests at Sample size 100, alpha=0.950000: Bootstrap - 0.913, CLT - 0.933"
+
+# Normal distribution coverage rate
+[1] "Tests at Sample size 3, alpha=0.900000: Bootstrap - 0.804, CLT - 0.909"
+[1] "Tests at Sample size 3, alpha=0.950000: Bootstrap - 0.807, CLT - 0.951"
+[1] "Tests at Sample size 10, alpha=0.900000: Bootstrap - 0.886, CLT - 0.878"
+[1] "Tests at Sample size 10, alpha=0.950000: Bootstrap - 0.957, CLT - 0.950"
+[1] "Tests at Sample size 30, alpha=0.900000: Bootstrap - 0.905, CLT - 0.905"
+[1] "Tests at Sample size 30, alpha=0.950000: Bootstrap - 0.954, CLT - 0.953"
+[1] "Tests at Sample size 100, alpha=0.900000: Bootstrap - 0.894, CLT - 0.895"
+[1] "Tests at Sample size 100, alpha=0.950000: Bootstrap - 0.966, CLT - 0.967"
