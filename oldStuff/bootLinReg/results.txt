@@ -1,0 +1,15 @@
+(using 1/2 weight of 1st row)
+Row used:
+  cylinders displacement horsepower weight acceleration year
+1         8          307        130   1752           12   70
+
+Normal prediction interval: 
+[1] 21.06550 27.35517
+
+Bootstrap prediction interval:
+[1] 20.53223 29.44292
+
+Other notes:
+Currently checking only quadratic variables, since leaps takes a ridiculously long time otherwise. 
+
+Calculates but does not use press statistic (I think).

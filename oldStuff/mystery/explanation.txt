@@ -1,0 +1,9 @@
+Procedure:
+
+Made pairs() plot, noticed that columns 2, 6, 7, and 8 don't just look like globs. 
+Used animate() from tourr package, got pretty pictures. 
+
+Code:
+pairs(mystery.dat)
+library(tourr)
+animate(mystery.dat[, c(2, 6, 7, 8)], tour_path=guided_tour(holes))
